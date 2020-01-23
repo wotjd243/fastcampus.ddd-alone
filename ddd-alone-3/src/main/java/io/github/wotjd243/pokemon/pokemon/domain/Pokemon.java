@@ -5,16 +5,32 @@ import java.util.Objects;
 public class Pokemon {
     private final NationalPokedexNumber number;
     private final String name;
-    private final int captureRate;
+    private final CaptureRate captureRate;
 
     public Pokemon(final int number, final String name, final int captureRate) {
-        this(NationalPokedexNumber.valueOf(number), name, captureRate);
+        this(NationalPokedexNumber.valueOf(number), name, CaptureRate.valueOf(captureRate));
     }
 
-    public Pokemon(final NationalPokedexNumber number, final String name, final int captureRate) {
+    public Pokemon(final NationalPokedexNumber number, final String name, final CaptureRate captureRate) {
         this.number = number;
         this.name = name;
         this.captureRate = captureRate;
+    }
+
+    public boolean isCaught(final int captureRate) {
+        return this.captureRate.isGreaterThanOrEqualTo(captureRate);
+    }
+
+    public int getNumber() {
+        return number.toInt();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCaptureRate() {
+        return captureRate.toInt();
     }
 
     @Override

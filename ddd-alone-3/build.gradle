@@ -1,7 +1,7 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.3.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
+    id 'org.springframework.boot' version '2.2.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
 }
 
 group = 'io.github.wotjd243'
@@ -9,24 +9,28 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
+    maven {
+        url 'https://jcenter.bintray.com'
+    }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-mustache'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
-	implementation 'org.webjars:bootstrap:4.3.1'
-	implementation 'org.webjars:jquery:3.4.0'
-	implementation 'org.webjars:popper.js:1.15.0'
-	implementation 'org.webjars:webjars-locator:0.36'
+    implementation 'me.sargunvohra.lib:pokekotlin:2.3.0'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    implementation 'org.webjars:bootstrap:4.3.1'
+    implementation 'org.webjars:jquery:3.4.0'
+    implementation 'org.webjars:popper.js:1.15.0'
+    implementation 'org.webjars:webjars-locator:0.36'
 }
 
 test {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
