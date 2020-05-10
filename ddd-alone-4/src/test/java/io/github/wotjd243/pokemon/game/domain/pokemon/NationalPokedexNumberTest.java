@@ -1,10 +1,9 @@
-package io.github.wotjd243.pokemon.pokemon.domain;
+package io.github.wotjd243.pokemon.game.domain.pokemon;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 class NationalPokedexNumberTest {

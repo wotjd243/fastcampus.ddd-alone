@@ -1,4 +1,4 @@
-package io.github.wotjd243.pokemon.pokemon.domain;
+package io.github.wotjd243.pokemon.game.domain.pokemon;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,12 +17,12 @@ public class NationalPokedexNumber {
         this.number = number;
     }
 
-    static NationalPokedexNumber valueOf(final int number) {
+    public static NationalPokedexNumber valueOf(final int number) {
         cached.putIfAbsent(number, new NationalPokedexNumber(number));
         return cached.get(number);
     }
 
-    int toInt() {
+    public int toInt() {
         return number;
     }
 

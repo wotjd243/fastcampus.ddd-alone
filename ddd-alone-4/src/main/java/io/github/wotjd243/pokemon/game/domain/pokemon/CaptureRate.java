@@ -1,10 +1,10 @@
-package io.github.wotjd243.pokemon.pokemon.domain;
+package io.github.wotjd243.pokemon.game.domain.pokemon;
 
 import java.util.Objects;
 
 public class CaptureRate {
-    private static final int MINIMUM_CAPTURE_RATE = 3;
-    private static final int MAXIMUM_CAPTURE_RATE = 255;
+    private static final int MINIMUM_RATE = 3;
+    private static final int MAXIMUM_RATE = 255;
 
     private final int rate;
 
@@ -21,8 +21,8 @@ public class CaptureRate {
         return rate;
     }
 
-    private void validate(final int captureRate) {
-        if (captureRate < MINIMUM_CAPTURE_RATE || captureRate > MAXIMUM_CAPTURE_RATE) {
+    private void validate(final int rate) {
+        if (rate < MINIMUM_RATE || rate > MAXIMUM_RATE) {
             throw new IllegalArgumentException();
         }
     }

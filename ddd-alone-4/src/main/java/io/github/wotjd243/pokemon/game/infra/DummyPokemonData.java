@@ -1,7 +1,7 @@
-package io.github.wotjd243.pokemon.pokemon.infra;
+package io.github.wotjd243.pokemon.game.infra;
 
-import io.github.wotjd243.pokemon.pokemon.domain.NationalPokedexNumber;
-import io.github.wotjd243.pokemon.pokemon.domain.Pokemon;
+import io.github.wotjd243.pokemon.game.domain.pokemon.NationalPokedexNumber;
+import io.github.wotjd243.pokemon.game.domain.pokemon.Pokemon;
 
 import java.util.HashMap;
 import java.util.Map;

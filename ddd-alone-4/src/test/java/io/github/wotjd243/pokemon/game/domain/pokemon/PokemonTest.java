@@ -1,4 +1,4 @@
-package io.github.wotjd243.pokemon.pokemon.domain;
+package io.github.wotjd243.pokemon.game.domain.pokemon;
 
 import org.junit.jupiter.api.Test;
 
